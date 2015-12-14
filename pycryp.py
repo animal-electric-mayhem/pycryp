@@ -74,7 +74,7 @@ def main():
     parser.add_argument('-d', action='store_true', help='decryption flag')
     parser.add_argument('-c', type=int, help='-c [C] where C is shift value')
     parser.add_argument('-v', help='-v [V] where V is the Vigenère keyword')
-    parser.add_argument('-vf', help='-vf [VF] where F is the Vigenère keyword file')
+    parser.add_argument('-vf', help='-vf [VF] where VF is the Vigenère keyword file')
     parser.add_argument('-i', required=True, help='path to input file')
     parser.add_argument('-o', required=True, help='path to output file')
     args = parser.parse_args()
