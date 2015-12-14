@@ -81,7 +81,7 @@ def main():
     # Decode?
     if args.d:
         decode = True
-    # Writes contents of Input File to mystring, cleans it up and closes Input File again, the opens Output File.
+    # Writes contents of input file to mystring, cleans it up and closes input file, the opens output file.
     inF = open(args.i)
     mystring = cleanString(inF.read())
     inF.close()
@@ -89,10 +89,11 @@ def main():
     # Caesar
     if args.c:
         opF.write(ListToString(NumToAlpha(rotate(AlphaToNum(mystring),args.c))) + '\n')
-    # Vigenère
+    # Vigenère without keyword file
     if args.v:
         keyW = cleanString(args.v.upper())
         opF.write(ListToString(NumToAlpha(vigenere(AlphaToNum(mystring),AlphaToNum(keyW)))) + '\n')
+    # Vigenère with a keyword file
     if args.vf:
         keyF = open(args.vf)
         keyString = cleanString(keyF.read())
