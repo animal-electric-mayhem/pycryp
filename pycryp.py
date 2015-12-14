@@ -12,7 +12,7 @@
 import re
 import argparse
 
-# Takes list "number", converts each item into uppercase, then converts into number and subtracts 65
+# Takes list "text", converts each item into uppercase, then converts into number and subtracts 65
 def AlphaToNum(text):
     message = []
     message.append([ord(char) - 65 for char in text.upper()])
